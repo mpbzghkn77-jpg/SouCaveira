@@ -1,33 +1,779 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07090c"><meta name="description" content="SOU CAVEIRA — preparação independente para PMPE Soldado"><title>SOU CAVEIRA — PMPE</title><style>
-:root{--bg:#07090c;--panel:#11151b;--panel2:#171c24;--text:#f4f6f8;--muted:#9da7b4;--gold:#e5b83f;--ok:#42d17a;--bad:#ef6461;--line:#29323e;--shadow:0 18px 45px rgba(0,0,0,.28)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#111a25 0,#080b10 42%,#060709 100%);color:var(--text);font:15px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,select{font:inherit}button{cursor:pointer}.app{max-width:980px;margin:auto;min-height:100vh;padding:12px 12px 42px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 2px 12px}.brand{font-weight:950;letter-spacing:.09em;font-size:18px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.16em;margin-top:2px}.top-actions{display:flex;gap:7px}.icon-btn{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px 11px}nav{display:flex;gap:6px;overflow:auto;padding:4px 0 10px;position:sticky;top:0;background:rgba(7,9,12,.94);backdrop-filter:blur(10px);z-index:20}nav button{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px 12px;white-space:nowrap}nav button.active{border-color:var(--gold);color:var(--gold)}main{padding-bottom:30px}.hero{background:linear-gradient(145deg,#151b24,#0e1218);border:1px solid var(--line);border-radius:18px;padding:20px;margin:8px 0 14px;box-shadow:var(--shadow)}.eyebrow{margin:0 0 7px;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.hero h1{margin:0 0 8px;font-size:28px}.hero p{margin:0;color:var(--muted);line-height:1.55}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.primary,.ghost,.danger-btn{border-radius:11px;padding:12px 15px;font-weight:800}.primary{background:var(--gold);color:#101010;border:1px solid var(--gold)}.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}.danger-btn{background:transparent;color:var(--bad);border:1px solid rgba(239,100,97,.35)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.card,.section,.question{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 8px 24px rgba(0,0,0,.12)}.card h3{margin:0 0 5px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}.big{font-size:25px;font-weight:900}.ok{color:var(--ok)}.danger{color:var(--bad)}.section{margin-top:14px}.section h2{margin:0 0 11px;font-size:18px}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05)}.row:last-child{border-bottom:0}.muted{color:var(--muted)}.progress{height:8px;background:#232a33;border-radius:20px;overflow:hidden;margin-top:8px}.progress i{display:block;height:100%;background:var(--gold);width:0}.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}.filter{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:11px;padding:11px}.meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.chip{display:inline-flex;background:#171d25;border:1px solid var(--line);color:var(--muted);border-radius:9px;padding:5px 8px;font-size:10px}.qtext{font-size:18px;line-height:1.55;font-weight:650;white-space:pre-wrap}.options{display:grid;gap:8px;margin-top:15px}.opt{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px;text-align:left;color:var(--text);line-height:1.45}.opt:disabled{cursor:default;opacity:1}.opt.correct{border-color:var(--ok);background:rgba(66,209,122,.12)}.opt.wrong{border-color:var(--bad);background:rgba(239,100,97,.12)}.explain{margin-top:13px;padding:13px;border-left:3px solid var(--gold);background:#171b20;border-radius:8px;line-height:1.55}.empty{padding:25px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}.notice{padding:12px;border:1px solid rgba(229,184,63,.25);background:rgba(229,184,63,.07);border-radius:12px;color:#ddd2ad;line-height:1.45}.bar{display:flex;justify-content:space-between;align-items:center;gap:10px}.statline{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.mini{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px}.mini span{display:block;color:var(--muted);font-size:11px}.mini b{font-size:20px}.hidden{display:none!important}.timer{font-variant-numeric:tabular-nums;font-weight:900}.result-score{text-align:center;padding:20px}.result-score strong{font-size:52px;display:block;color:var(--gold)}.result-score span{color:var(--muted)}.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50}.modal-card{max-width:560px;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}.modal-card h2{margin-top:0}@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr}.hero h1{font-size:23px}.qtext{font-size:16px}.app{padding:8px}.brand{font-size:16px}.statline{grid-template-columns:1fr 1fr 1fr}}
-</style></head><body><div class="app">Carregando…</div><script>window.__QUESTIONS__=[{"id":"SC-00001","subject":"Língua Portuguesa","topic":"Interpretação de textos","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Em um texto argumentativo, o autor afirma: “A rapidez de uma informação não elimina a necessidade de verificá-la; ao contrário, quanto maior a velocidade de circulação, maior deve ser o cuidado com sua confirmação.” A relação estabelecida entre as duas orações é de","options":["causa e consequência.","condição e finalidade.","concessão e conclusão.","proporção e reforço de uma recomendação.","explicação e oposição."],"answer":"D","explanation":"A segunda parte estabelece uma relação proporcional: à medida que aumenta a velocidade de circulação, aumenta a necessidade de cuidado. O segundo segmento reforça a recomendação anterior.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Interpretação de textos"]},{"id":"SC-00002","subject":"Língua Portuguesa","topic":"Figuras de linguagem","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"Em “O silêncio da sala gritava mais que qualquer discurso”, predomina a figura de linguagem denominada","options":["metonímia.","personificação.","eufemismo.","antítese.","pleonasmo."],"answer":"B","explanation":"Atribui-se ao silêncio uma ação humana — gritar —, caracterizando personificação (prosopopeia).","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Figuras de linguagem"]},{"id":"SC-00003","subject":"Língua Portuguesa","topic":"Crase","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Assinale a alternativa em que o emprego do acento indicativo de crase está de acordo com a norma-padrão.","options":["O candidato dirigiu-se à uma sala reservada.","A equipe retornou à Recife após a prova.","A orientação foi entregue àqueles que solicitaram atendimento.","O fiscal começou à conferir os documentos.","A comissão ficou frente à frente com os candidatos."],"answer":"C","explanation":"“Àqueles” resulta da fusão da preposição a com o pronome demonstrativo aqueles. Nas demais, há problemas: não se usa crase antes de “uma”; Recife não admite artigo feminino nesse contexto; antes de verbo não há crase; em “frente a frente”, a locução não recebe crase.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Crase"]},{"id":"SC-00004","subject":"Língua Portuguesa","topic":"Concordância verbal","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Assinale a frase correta segundo a norma-padrão.","options":["Houveram diversas ocorrências durante a operação.","Fazem dois anos que o candidato iniciou os estudos.","Devem existir soluções para o problema apresentado.","Existe, entre os documentos, informações divergentes.","Tratam-se de questões complexas."],"answer":"C","explanation":"O verbo existir concorda normalmente com o sujeito: “soluções”. Em “haver” impessoal, usa-se “houve”; “fazer” indicando tempo é impessoal; “informações” exigiria “existem”; “tratar-se” impessoal fica no singular.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Concordância verbal"]},{"id":"SC-00005","subject":"Língua Portuguesa","topic":"Regência verbal","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Na norma-padrão, a construção que apresenta regência adequada é","options":["O candidato preferiu mais estudar do que descansar.","O servidor aspirava o cargo público.","A equipe informou o candidato do resultado.","O fiscal obedeceu o regulamento.","O candidato visou ao cargo pretendido."],"answer":"E","explanation":"No sentido de almejar, “visar” rege a preposição a: “visou ao cargo”. “Preferir” pede estrutura sem “mais”; “aspirar”, no sentido de desejar, rege a; “informar” pode admitir construções diferentes, mas a alternativa foi formulada para evitar a regência inadequada das demais; “obedecer” rege a.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Regência verbal"]},{"id":"SC-00006","subject":"Língua Portuguesa","topic":"Funções do que e do se","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"Em “É necessário que o candidato revise o conteúdo”, o termo “que” exerce a função de","options":["pronome relativo, retomando “candidato”.","conjunção integrante, introduzindo oração subordinada substantiva.","conjunção coordenativa explicativa.","pronome interrogativo.","partícula expletiva."],"answer":"B","explanation":"O “que” introduz uma oração que funciona como sujeito de “é necessário”, sem retomar antecedente nominal. Por isso é conjunção integrante.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Funções do que e do se"]},{"id":"SC-00007","subject":"Língua Portuguesa","topic":"Pontuação e coesão","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Considere: “Os candidatos que estudaram com regularidade, porém, tiveram melhor desempenho.” A retirada das vírgulas que isolam “porém”","options":["obrigatoriamente altera o sentido temporal da oração.","é impossível, pois “porém” deve sempre ficar entre vírgulas.","pode ser admitida conforme sua posição e função, sem transformar “porém” em conjunção subordinativa.","transforma “porém” em advérbio de intensidade.","elimina a relação de contraste."],"answer":"C","explanation":"“Porém” é conjunção coordenativa adversativa e pode aparecer deslocada, sendo isolada por vírgulas quando intercalada. Sua retirada não elimina a relação adversativa, que pode ser expressa pela própria conjunção em outra posição.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Pontuação e coesão"]},{"id":"SC-00008","subject":"Língua Portuguesa","topic":"Acentuação","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"Assinale a alternativa em que todas as palavras estão grafadas de acordo com a ortografia oficial vigente.","options":["ideia, herói, voo.","idéia, herói, vôo.","feiura, assembléia, herói.","enjôo, papéis, idéia.","vôo, jiboia, heróico."],"answer":"A","explanation":"Após o Acordo Ortográfico, “ideia” e “voo” perderam acento; “herói” mantém acento por ser oxítona com ditongo aberto tônico.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Acentuação"]},{"id":"SC-00009","subject":"Língua Portuguesa","topic":"Colocação pronominal","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Assinale a alternativa em que a colocação pronominal está adequada à norma-padrão.","options":["Não diga-me isso agora.","Quando me avisarem, retornarei imediatamente.","Jamais entregarei-lhe o documento sem autorização.","Me disseram que a prova foi alterada.","Se encontrarei-o amanhã, entregarei o material."],"answer":"B","explanation":"A conjunção subordinativa “quando” atrai o pronome para antes do verbo: “Quando me avisarem”. As demais apresentam contextos de próclise ou construções inadequadas.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Colocação pronominal"]},{"id":"SC-00010","subject":"Língua Portuguesa","topic":"Variação linguística","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"Sobre variação linguística, assinale a afirmação correta.","options":["Toda variedade não padrão é necessariamente errada em qualquer contexto.","A língua apresenta variações relacionadas, entre outros fatores, à região, ao grupo social e à situação comunicativa.","A norma-padrão elimina todas as variedades regionais.","Variação histórica ocorre somente na escrita literária.","Diferenças de registro não interferem na adequação comunicativa."],"answer":"B","explanation":"A língua varia conforme fatores geográficos, sociais, históricos e situacionais. Adequação depende do contexto comunicativo.","legal_basis":"","tags":["PMPE","AOCP-style","Língua Portuguesa","Variação linguística"]},{"id":"SC-00011","subject":"História de Pernambuco","topic":"Ocupação e colonização","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"Na formação inicial da capitania de Pernambuco, Duarte Coelho destacou-se por","options":["administrar a capitania e impulsionar sua ocupação e atividade açucareira.","ser governador holandês de Pernambuco.","liderar a Revolução Pernambucana de 1817.","fundar a Confederação do Equador.","comandar a Revolução Praieira."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Ocupação e colonização"]},{"id":"SC-00012","subject":"História de Pernambuco","topic":"Economia açucareira","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A expansão da produção açucareira em Pernambuco colonial esteve relacionada, principalmente, à","options":["produção voltada ao mercado atlântico, baseada no engenho e no trabalho escravizado.","industrialização urbana do século XVIII.","mineração de ouro em larga escala.","substituição completa do trabalho escravizado por assalariamento.","economia exclusivamente de subsistência."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Economia açucareira"]},{"id":"SC-00013","subject":"História de Pernambuco","topic":"Olinda e Recife","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"No processo histórico de formação de Olinda e Recife, é correto afirmar que","options":["a relação entre o núcleo urbano de Olinda e o porto do Recife foi central para a dinâmica econômica da capitania.","Recife surgiu como capital republicana no século XVII.","Olinda foi fundada pelos holandeses no século XVII.","Recife não possuía importância portuária no período colonial.","as duas cidades permaneceram economicamente isoladas."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Olinda e Recife"]},{"id":"SC-00014","subject":"História de Pernambuco","topic":"Domínio holandês","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"O governo de Maurício de Nassau em Pernambuco é associado a","options":["medidas administrativas, urbanísticas e culturais durante o domínio holandês, além da manutenção da economia açucareira.","fim imediato da produção de açúcar.","expulsão definitiva dos holandeses em 1637.","implantação da República de Pernambuco.","abolição da escravidão."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Domínio holandês"]},{"id":"SC-00015","subject":"História de Pernambuco","topic":"Insurreição Pernambucana","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Insurreição Pernambucana do século XVII esteve ligada","options":["à resistência luso-brasileira que culminou na expulsão dos holandeses de Pernambuco.","à independência do Brasil em 1822.","à Revolução Praieira de 1848.","à Confederação do Equador.","à Guerra dos Mascates."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Insurreição Pernambucana"]},{"id":"SC-00016","subject":"História de Pernambuco","topic":"Guerra dos Mascates","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Guerra dos Mascates relacionou-se, entre outros fatores, à","options":["disputa de poder e interesses entre a elite de Olinda e comerciantes de Recife.","luta entre holandeses e portugueses.","revolta contra a Independência do Brasil.","abolição do tráfico atlântico.","conflito entre Pernambuco e Ceará."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Guerra dos Mascates"]},{"id":"SC-00017","subject":"História de Pernambuco","topic":"Revolução 1817","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Revolução Pernambucana de 1817 caracterizou-se por","options":["movimento de caráter republicano e emancipacionista que rompeu temporariamente com o governo português.","defesa da restauração do domínio holandês.","movimento exclusivamente monarquista.","apoio à centralização do poder imperial.","movimento ocorrido após a Proclamação da República."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Revolução 1817"]},{"id":"SC-00018","subject":"História de Pernambuco","topic":"Confederação Equador","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Confederação do Equador, em 1824, esteve associada","options":["à oposição ao centralismo do Império e à defesa de maior autonomia, com forte participação pernambucana.","à restauração do domínio holandês.","à criação do Estado Novo.","à Independência de Pernambuco em 1817.","à Guerra dos Mascates."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Confederação Equador"]},{"id":"SC-00019","subject":"História de Pernambuco","topic":"Praieira","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Revolução Praieira (1848) ocorreu durante o período regencial e imperial?","options":["Não. Ocorreu no Segundo Reinado, em Pernambuco, em contexto de disputas políticas e sociais.","Sim, durante a Regência.","Sim, durante a Colônia.","Não. Ocorreu na Primeira República.","Não. Ocorreu durante o Estado Novo."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Praieira"]},{"id":"SC-00020","subject":"História de Pernambuco","topic":"Cultura pernambucana","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"Entre manifestações culturais associadas a Pernambuco, encontram-se","options":["frevo e maracatu.","fandango gaúcho e carimbó.","baião exclusivamente cearense e jongo.","choro exclusivamente carioca e frevo.","bumba meu boi exclusivamente maranhense e frevo."],"answer":"A","explanation":"A alternativa correta corresponde ao processo histórico ou manifestação cultural descrita no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","História de Pernambuco","Cultura pernambucana"]},{"id":"SC-00021","subject":"Raciocínio Lógico","topic":"Proposições e conectivos","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Se p é verdadeira e q é falsa, o valor lógico de p → q é","options":["Verdadeiro.","Falso.","Indeterminado.","Verdadeiro somente se p e q forem equivalentes.","Falso somente se p for falsa."],"answer":"B","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Proposições e conectivos"]},{"id":"SC-00022","subject":"Raciocínio Lógico","topic":"Negação","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A negação lógica de “Todos os candidatos estudaram Direito Constitucional” é","options":["Nenhum candidato estudou Direito Constitucional.","Todos os candidatos não estudaram Direito Constitucional.","Pelo menos um candidato não estudou Direito Constitucional.","Pelo menos um candidato estudou Direito Constitucional.","Alguns e todos estudaram Direito Constitucional."],"answer":"C","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Negação"]},{"id":"SC-00023","subject":"Raciocínio Lógico","topic":"Equivalência","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A proposição “Se p, então q” é logicamente equivalente a","options":["p ∧ q.","p ∨ q.","¬p ∨ q.","p ∧ ¬q.","¬p ∧ q."],"answer":"C","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Equivalência"]},{"id":"SC-00024","subject":"Raciocínio Lógico","topic":"Conectivos","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"A proposição p ∧ q é verdadeira quando","options":["p ou q é verdadeira.","p e q são falsas.","p e q são verdadeiras.","p é falsa e q é verdadeira.","p é verdadeira e q é falsa."],"answer":"C","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Conectivos"]},{"id":"SC-00025","subject":"Raciocínio Lógico","topic":"Argumentação","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"Um argumento é válido quando","options":["a conclusão é verdadeira em qualquer situação, independentemente das premissas.","é impossível que todas as premissas sejam verdadeiras e a conclusão seja falsa.","as premissas são necessariamente verdadeiras.","a conclusão é mais provável que as premissas.","há pelo menos uma premissa falsa."],"answer":"B","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Argumentação"]},{"id":"SC-00026","subject":"Raciocínio Lógico","topic":"Diagramas lógicos","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Se todo A é B e nenhum B é C, então é necessariamente correto afirmar que","options":["algum A é C.","nenhum A é C.","todo C é A.","algum C é B.","todo B é A."],"answer":"B","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Diagramas lógicos"]},{"id":"SC-00027","subject":"Raciocínio Lógico","topic":"Princípio multiplicativo","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"Uma senha possui 2 letras, seguidas de 3 algarismos. Admitindo repetição e 26 letras e 10 algarismos, o total de senhas é","options":["26×10.","26²×10³.","26³×10².","36⁵.","52×30."],"answer":"B","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Princípio multiplicativo"]},{"id":"SC-00028","subject":"Raciocínio Lógico","topic":"Permutação","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"De quantas maneiras distintas 5 pessoas podem ocupar 5 lugares em uma fila?","options":["25.","60.","100.","120.","125."],"answer":"D","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Permutação"]},{"id":"SC-00029","subject":"Raciocínio Lógico","topic":"Combinação","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"De um grupo de 8 candidatos, serão escolhidos 2 para uma tarefa, sem considerar a ordem. Quantas escolhas são possíveis?","options":["16.","28.","32.","56.","64."],"answer":"B","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Combinação"]},{"id":"SC-00030","subject":"Raciocínio Lógico","topic":"Probabilidade","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Uma urna contém 3 bolas vermelhas e 2 azuis. Retirando-se uma bola ao acaso, a probabilidade de ela ser azul é","options":["1/5.","2/5.","3/5.","1/2.","2/3."],"answer":"B","explanation":"A resposta decorre diretamente da regra lógica ou combinatória indicada no enunciado.","legal_basis":"","tags":["PMPE","AOCP-style","Raciocínio Lógico","Probabilidade"]},{"id":"SC-00031","subject":"Informática","topic":"Internet e intranet","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"A principal diferença entre Internet e intranet é que","options":["a Internet é uma rede privada e a intranet é pública.","a intranet é uma rede interna de uma organização, enquanto a Internet é uma rede de alcance global.","ambas são sempre redes públicas.","a Internet funciona sem protocolos.","a intranet não pode usar navegadores."],"answer":"B","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Internet e intranet"]},{"id":"SC-00032","subject":"Informática","topic":"Phishing","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Uma mensagem que simula comunicação de banco e induz o usuário a fornecer senha em página falsa é exemplo típico de","options":["backup.","phishing.","desfragmentação.","criptografia simétrica.","compactação."],"answer":"B","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Phishing"]},{"id":"SC-00033","subject":"Informática","topic":"Backup","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Em uma política de backup, a cópia incremental normalmente","options":["copia todos os arquivos a cada execução.","copia apenas dados alterados desde o último backup realizado, conforme a estratégia adotada.","substitui a necessidade de backup completo.","não permite restauração.","é sinônimo de espelhamento de tela."],"answer":"B","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Backup"]},{"id":"SC-00034","subject":"Informática","topic":"Segurança","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"O princípio da segurança da informação que busca impedir alteração indevida de dados é","options":["disponibilidade.","integridade.","confidencialidade.","portabilidade.","redundância."],"answer":"B","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Segurança"]},{"id":"SC-00035","subject":"Informática","topic":"Arquivos Windows","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"No Windows, uma pasta é utilizada principalmente para","options":["organizar arquivos e outras pastas.","executar exclusivamente programas da Microsoft.","substituir a memória RAM.","criptografar automaticamente todos os arquivos.","impedir qualquer cópia de arquivo."],"answer":"A","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Arquivos Windows"]},{"id":"SC-00036","subject":"Informática","topic":"Word 2019","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"No Microsoft Word, o recurso de controle de alterações é utilizado principalmente para","options":["acompanhar edições realizadas em um documento.","converter o documento em planilha.","criar conexão física de rede.","apagar permanentemente o histórico do arquivo.","formatar o disco rígido."],"answer":"A","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Word 2019"]},{"id":"SC-00037","subject":"Informática","topic":"Excel 2019","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"No Excel, a fórmula =SOMA(A1:A5) tem como finalidade","options":["calcular a média dos valores.","somar os valores do intervalo A1 até A5.","contar somente células vazias.","ordenar os dados.","criar um gráfico automaticamente."],"answer":"B","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Excel 2019"]},{"id":"SC-00038","subject":"Informática","topic":"PowerPoint","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"No PowerPoint, a apresentação é organizada principalmente em","options":["planilhas.","slides.","registros.","consultas SQL.","pastas de sistema."],"answer":"B","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","PowerPoint"]},{"id":"SC-00039","subject":"Informática","topic":"LibreOffice","difficulty":"médio","type":"autoral","source":"SOU CAVEIRA","question":"No LibreOffice, o aplicativo correspondente ao Microsoft Excel é o","options":["Writer.","Impress.","Calc.","Base64.","DrawText."],"answer":"C","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","LibreOffice"]},{"id":"SC-00040","subject":"Informática","topic":"Navegação segura","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Uma medida adequada para reduzir o risco de comprometimento de contas é","options":["reutilizar a mesma senha em todos os serviços.","desativar atualizações.","usar autenticação multifator quando disponível.","abrir anexos desconhecidos para verificar seu conteúdo.","compartilhar códigos de autenticação com terceiros."],"answer":"C","explanation":"A alternativa correta corresponde ao conceito técnico descrito.","legal_basis":"","tags":["PMPE","AOCP-style","Informática","Navegação segura"]},{"id":"SC-00041","subject":"Direito Constitucional","topic":"Princípios fundamentais","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Entre os fundamentos da República Federativa do Brasil, encontra-se","options":["a soberania.","a censura prévia.","a intervenção permanente.","a supremacia militar.","a extinção dos municípios."],"answer":"A","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 1º.","tags":["PMPE","AOCP-style","Direito Constitucional","Princípios fundamentais"]},{"id":"SC-00042","subject":"Direito Constitucional","topic":"Reunião","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"Sobre o direito de reunião, a Constituição Federal estabelece que","options":["depende sempre de autorização prévia.","pode ocorrer pacificamente, sem armas, em locais abertos ao público, observados os requisitos constitucionais.","é permitido impedir reunião pacífica por mera discordância de seu conteúdo.","somente agentes públicos podem convocar reuniões.","a reunião dispensa qualquer aviso prévio em qualquer circunstância."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, XVI.","tags":["PMPE","AOCP-style","Direito Constitucional","Reunião"]},{"id":"SC-00043","subject":"Direito Constitucional","topic":"Domicílio","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A entrada em domicílio sem consentimento do morador é constitucionalmente admitida, entre outras hipóteses,","options":["sempre que houver denúncia anônima, sem qualquer outra circunstância.","durante o dia, por determinação judicial, ou a qualquer hora em caso de flagrante delito, desastre ou para prestar socorro.","somente durante a noite por ordem judicial.","apenas com autorização policial.","somente em investigação administrativa."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, XI.","tags":["PMPE","AOCP-style","Direito Constitucional","Domicílio"]},{"id":"SC-00044","subject":"Direito Constitucional","topic":"Interceptação","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A interceptação de comunicações telefônicas, segundo a Constituição,","options":["pode ocorrer por decisão administrativa.","é admitida para qualquer finalidade.","depende de ordem judicial, nas hipóteses e na forma que a lei estabelecer, para fins de investigação criminal ou instrução processual penal.","é sempre proibida.","depende apenas de autorização do Ministério Público."],"answer":"C","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, XII.","tags":["PMPE","AOCP-style","Direito Constitucional","Interceptação"]},{"id":"SC-00045","subject":"Direito Constitucional","topic":"Prisão","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Ninguém será preso senão","options":["por ordem verbal de qualquer agente público.","em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente, ressalvadas as hipóteses constitucionais.","por determinação de qualquer particular.","por decisão administrativa definitiva.","por denúncia anônima."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, LXI.","tags":["PMPE","AOCP-style","Direito Constitucional","Prisão"]},{"id":"SC-00046","subject":"Direito Constitucional","topic":"Provas ilícitas","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Constituição Federal determina que são inadmissíveis","options":["todas as provas testemunhais.","as provas obtidas por meios ilícitos.","somente provas digitais.","somente provas documentais.","as provas produzidas pela defesa."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, LVI.","tags":["PMPE","AOCP-style","Direito Constitucional","Provas ilícitas"]},{"id":"SC-00047","subject":"Direito Constitucional","topic":"Remédios constitucionais","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"O habeas corpus é cabível quando alguém sofre ou se acha ameaçado de sofrer","options":["violação patrimonial.","coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder.","qualquer cobrança tributária.","somente dano moral.","perda de propriedade."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, LXVIII.","tags":["PMPE","AOCP-style","Direito Constitucional","Remédios constitucionais"]},{"id":"SC-00048","subject":"Direito Constitucional","topic":"Mandado de segurança","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"O mandado de segurança protege","options":["qualquer direito sem requisito adicional.","direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder se enquadrar nas hipóteses constitucionais.","exclusivamente liberdade de locomoção.","somente direitos políticos.","somente interesses coletivos difusos."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, LXIX.","tags":["PMPE","AOCP-style","Direito Constitucional","Mandado de segurança"]},{"id":"SC-00049","subject":"Direito Constitucional","topic":"Contraditório e ampla defesa","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Aos litigantes, em processo judicial ou administrativo, e aos acusados em geral, são assegurados","options":["somente o contraditório.","o contraditório e a ampla defesa, com os meios e recursos a ela inerentes.","apenas defesa técnica em processo judicial.","somente recurso administrativo.","apenas direito à informação."],"answer":"B","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, LV.","tags":["PMPE","AOCP-style","Direito Constitucional","Contraditório e ampla defesa"]},{"id":"SC-00050","subject":"Direito Constitucional","topic":"Presunção de não culpabilidade","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Segundo a Constituição Federal, ninguém será considerado culpado","options":["até a denúncia.","até a sentença de primeiro grau.","até o trânsito em julgado de sentença penal condenatória.","até a prisão cautelar.","até o oferecimento da defesa."],"answer":"C","explanation":"A alternativa correta reproduz o conteúdo constitucional pertinente, aplicado ao caso proposto.","legal_basis":"CF, art. 5º, LVII.","tags":["PMPE","AOCP-style","Direito Constitucional","Presunção de não culpabilidade"]},{"id":"SC-00051","subject":"Direitos Humanos e Legislação Extravagante","topic":"DUDH","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"Segundo a Declaração Universal dos Direitos Humanos, os seres humanos","options":["nascem livres e iguais em dignidade e direitos.","nascem com direitos diferentes segundo sua nacionalidade.","somente adquirem dignidade após reconhecimento estatal.","podem ter direitos humanos negados por origem.","possuem direitos apenas se forem cidadãos."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Declaração Universal dos Direitos Humanos, art. 1º.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","DUDH"]},{"id":"SC-00052","subject":"Direitos Humanos e Legislação Extravagante","topic":"DUDH","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Declaração Universal dos Direitos Humanos afirma que","options":["ninguém deve ser submetido a tortura nem a tratamento ou castigo cruel, desumano ou degradante.","a tortura é admitida em situações excepcionais.","a prisão elimina todos os direitos.","a dignidade depende da renda.","o Estado pode aplicar tratamentos degradantes como punição."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Declaração Universal dos Direitos Humanos, art. 5º.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","DUDH"]},{"id":"SC-00053","subject":"Direitos Humanos e Legislação Extravagante","topic":"Abuso de autoridade","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"Na Lei nº 13.869/2019, os crimes de abuso de autoridade exigem, em regra,","options":["finalidade específica prevista na lei.","somente culpa inconsciente.","ausência completa de dolo.","qualquer erro administrativo.","responsabilidade objetiva."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 13.869/2019, art. 1º, §1º.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Abuso de autoridade"]},{"id":"SC-00054","subject":"Direitos Humanos e Legislação Extravagante","topic":"Tortura","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Lei nº 9.455/1997 tipifica, entre outras condutas, constranger alguém com emprego de violência ou grave ameaça, causando-lhe","options":["apenas prejuízo patrimonial.","sofrimento físico ou mental para obter informação, declaração ou confissão.","somente constrangimento econômico.","exclusivamente dano material.","apenas medo sem violência ou grave ameaça."],"answer":"B","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 9.455/1997.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Tortura"]},{"id":"SC-00055","subject":"Direitos Humanos e Legislação Extravagante","topic":"Maria da Penha","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Lei nº 11.340/2006 reconhece como formas de violência doméstica e familiar contra a mulher, entre outras, a violência","options":["física, psicológica, sexual, patrimonial e moral.","somente física.","somente patrimonial.","exclusivamente sexual.","somente moral."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 11.340/2006, art. 7º.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Maria da Penha"]},{"id":"SC-00056","subject":"Direitos Humanos e Legislação Extravagante","topic":"Lei 7.716/1989","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Lei nº 7.716/1989 trata de crimes resultantes de","options":["preconceito de raça ou de cor, abrangendo outras formas previstas na legislação vigente.","somente crimes ambientais.","somente crimes eleitorais.","apenas crimes militares.","somente crimes contra o patrimônio."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 7.716/1989.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Lei 7.716/1989"]},{"id":"SC-00057","subject":"Direitos Humanos e Legislação Extravagante","topic":"Crimes ambientais","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Lei nº 9.605/1998 dispõe sobre","options":["sanções penais e administrativas derivadas de condutas e atividades lesivas ao meio ambiente.","somente contratos administrativos.","somente crimes militares.","apenas infrações eleitorais.","somente crimes contra a honra."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 9.605/1998.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Crimes ambientais"]},{"id":"SC-00058","subject":"Direitos Humanos e Legislação Extravagante","topic":"Crimes hediondos","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Lei nº 8.072/1990 estabelece tratamento jurídico específico para","options":["crimes definidos como hediondos e outros delitos expressamente previstos na própria lei.","todas as contravenções penais.","qualquer infração administrativa.","somente crimes culposos.","apenas delitos militares."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 8.072/1990.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Crimes hediondos"]},{"id":"SC-00059","subject":"Direitos Humanos e Legislação Extravagante","topic":"Lei de Drogas","difficulty":"difícil","type":"autoral","source":"SOU CAVEIRA","question":"A Lei nº 11.343/2006 institui","options":["o Sistema Nacional de Políticas Públicas sobre Drogas e estabelece medidas de prevenção, atenção, reinserção social e repressão à produção não autorizada e ao tráfico ilícito.","somente regras de trânsito.","apenas normas trabalhistas.","somente regras de execução penal.","exclusivamente normas civis."],"answer":"A","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Lei nº 11.343/2006.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Lei de Drogas"]},{"id":"SC-00060","subject":"Direitos Humanos e Legislação Extravagante","topic":"Estatuto PMPE","difficulty":"muito difícil","type":"autoral","source":"SOU CAVEIRA","question":"No banco do SOU CAVEIRA, o estudo da Lei Estadual nº 6.783/1974 deve ser tratado como","options":["conteúdo fora do edital, pois é legislação estadual.","conteúdo expressamente previsto no programa de Direitos Humanos e Legislação Extravagante.","matéria exclusiva de Português.","conteúdo facultativo sem relação com a prova.","tema restrito ao cargo de Oficial."],"answer":"B","explanation":"A alternativa correta corresponde ao conteúdo normativo indicado. Para legislação, o aplicativo deve manter a versão vinculada à data de referência e registrar atualizações.","legal_basis":"Edital PMPE 001/2026, Anexo II; Lei Estadual nº 6.783/1974.","tags":["PMPE","AOCP-style","Direitos Humanos e Legislação Extravagante","Estatuto PMPE"]}];window.__EDITAL__={"version":"PMPE-2026","reference_date":"2026-09-29","syllabus":{"Língua Portuguesa":["Compreensão e interpretação de textos","Tipologias e gêneros textuais","Figuras de linguagem","Relações semânticas entre orações, períodos e parágrafos","Ortografia oficial e acentuação gráfica","Emprego das classes de palavras e da crase","Sintaxe da oração e do período","Funções do “que” e do “se”","Mecanismos de coesão textual e pontuação","Concordância nominal e verbal","Regência nominal e verbal","Colocação pronominal","Formação e significação das palavras","Variação linguística"],"História de Pernambuco":["Ocupação e colonização – contatos iniciais, Capitanias Hereditárias e Duarte Coelho","Importância do açúcar para a economia local","Formação de Olinda e Recife","Presença holandesa e governo de Maurício de Nassau","Movimentos de resistência e emancipacionistas: Quilombos, Insurreição Pernambucana, Guerra dos Mascates, Revolução Pernambucana, Confederação do Equador, Guerra dos Cabanos e Revolução Praieira","Pernambuco e a República","Manifestações da cultura popular pernambucana – frevo, maracatu, culinária e festas populares","Herança afrodescendente em Pernambuco"],"Raciocínio Lógico":["Proposições e conectivos lógicos","Quantificadores e falácias","Analogias, inferências e deduções","Equivalência e implicação lógica","Argumentos válidos e conclusões","Diagramas lógicos","Princípios da contagem e técnicas de contagem","Princípio multiplicativo","Permutações, arranjos e combinações","Probabilidade"],"Informática":["Internet e intranet","Tecnologias, ferramentas, aplicativos e procedimentos associados à internet/intranet","Proteção e segurança","Armazenamento de dados e backup","Organização e gerenciamento de arquivos, pastas e programas","Instalação de periféricos","Windows em português – utilização básica","Microsoft Office 2019: Word, Excel e PowerPoint","LibreOffice 7: Writer, Calc e Impress"],"Direito Constitucional":["Princípios fundamentais","Direitos e garantias fundamentais","Direitos e deveres individuais e coletivos","Direito à vida, liberdade, igualdade, segurança e propriedade","Direitos sociais","Nacionalidade e direitos políticos","Remédios constitucionais","Organização político-administrativa e repartição de competências","União, Estados Federados e Municípios","Administração Pública e servidores públicos","Militares dos Estados, DF e Territórios","Poder Legislativo","Poder Executivo","Poder Judiciário","Defesa do Estado e das instituições democráticas","Súmulas, jurisprudência dominante e legislação relacionada"],"Direitos Humanos e Legislação Extravagante":["Teoria geral dos Direitos Humanos","Evolução histórica e gerações de direitos humanos","Incorporação de normas internacionais de Direitos Humanos ao direito interno brasileiro","Declaração Universal dos Direitos Humanos (ONU – 1948)","Crimes no Estatuto da Criança e do Adolescente","Lei nº 13.869/2019 – Abuso de Autoridade","Lei nº 9.455/1997 – Tortura","Lei nº 11.340/2006 – Maria da Penha","Lei nº 7.716/1989 – Crimes resultantes de preconceito de raça ou de cor","Lei nº 9.605/1998 – Crimes Ambientais","Lei nº 8.072/1990 – Crimes Hediondos","Lei nº 11.343/2006 – Lei de Drogas","Lei Estadual nº 6.783/1974 – Estatuto dos Policiais Militares de Pernambuco","Súmulas, jurisprudência dominante e legislação relacionada"]},"targets":{"Língua Portuguesa":900,"Direito Constitucional":900,"Direitos Humanos e Legislação Extravagante":900,"História de Pernambuco":600,"Raciocínio Lógico":600,"Informática":600}};</script><script>
-const QUESTIONS=window.__QUESTIONS__, EDITAL=window.__EDITAL__;
-const KEY='sou-caveira-v1';
-let state=JSON.parse(localStorage.getItem(KEY)||'null')||{view:'home',subject:'',difficulty:'',topic:'',index:0,answers:{},errors:{},favorites:{},history:[],sim:null};
-const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-function save(){localStorage.setItem(KEY,JSON.stringify(state))}
-function stats(){const a=Object.values(state.answers),c=a.filter(x=>x.correct).length;return{answered:a.length,correct:c,wrong:a.length-c,pct:a.length?Math.round(c/a.length*100):0}}
-function subjects(){return [...new Set(QUESTIONS.map(q=>q.subject))]}
-function filtered(){return QUESTIONS.filter(q=>(!state.subject||q.subject===state.subject)&&(!state.difficulty||q.difficulty===state.difficulty)&&(!state.topic||q.topic===state.topic))}
-function nav(){return `<nav>${[['home','Painel'],['questions','Questões'],['sim','Simulado'],['review','Erros'],['syllabus','Edital'],['laws','Lei Seca']].map(([k,l])=>`<button class="${state.view===k?'active':''}" data-nav="${k}">${l}</button>`).join('')}</nav>`}
-function shell(body){return `<div class="app"><header><div class="brand">☠ SOU CAVEIRA<small>PMPE • AOCP • INDEPENDENTE</small></div><div class="top-actions"><button class="icon-btn" data-action="about">?</button></div></header>${nav()}<main>${body}</main></div>`}
-function home(){const s=stats(), rows=subjects().map(sub=>{const a=Object.entries(state.answers).filter(([id])=>QUESTIONS.find(q=>q.id===id)?.subject===sub).map(([,v])=>v);const c=a.filter(v=>v.correct).length;return `<div class="row"><span>${esc(sub)}</span><b>${a.length?Math.round(c/a.length*100):0}% <span class="muted">(${a.length})</span></b></div>`}).join('');const targets=EDITAL.targets||{};return `<section class="hero"><p class="eyebrow">Missão PMPE</p><h1>Treine. Revise. Evolua.</h1><p>Plataforma independente de preparação para o Soldado PMPE. O banco atual contém <b>${QUESTIONS.length}</b> questões autorais; a meta de 5.000+ será atingida somente quando as questões existirem e forem validadas.</p><div class="actions"><button class="primary" data-action="mission">▶ Treino rápido</button><button class="ghost" data-nav="sim">Simulado de 60</button></div></section><div class="grid"><div class="card"><h3>Respondidas</h3><div class="big">${s.answered}</div></div><div class="card"><h3>Acertos</h3><div class="big ok">${s.correct}</div></div><div class="card"><h3>Erros</h3><div class="big danger">${s.wrong}</div></div><div class="card"><h3>Aproveitamento</h3><div class="big">${s.pct}%</div></div></div><section class="section"><div class="bar"><h2>Desempenho por disciplina</h2><span class="chip">${s.answered} respostas</span></div><div>${rows||'<div class="empty">Comece uma missão para montar seu mapa de desempenho.</div>'}</div></section><section class="section"><h2>Banco de questões</h2>${Object.entries(targets).map(([sub,target])=>{const n=QUESTIONS.filter(q=>q.subject===sub).length;return `<div class="row"><span>${esc(sub)}</span><span>${n} / ${target}</span></div>`}).join('')}</section>`}
-function questions(){const list=filtered();if(!list.length)return `<section class="section"><h2>Banco de questões</h2>${filters()}<div class="empty">Nenhuma questão encontrada com esses filtros.</div></section>`;const i=Math.min(state.index,list.length-1),q=list[i],a=state.answers[q.id];return `<section class="section"><div class="bar"><h2>Banco de questões</h2><span class="chip">${i+1}/${list.length}</span></div>${filters()}${questionCard(q,a)}<div class="actions"><button class="ghost" data-action="prevq">Anterior</button><button class="primary" data-action="nextq">Próxima</button></div></section>`}
-function filters(){const topics=[...new Set(QUESTIONS.filter(q=>!state.subject||q.subject===state.subject).map(q=>q.topic))];return `<div class="filters"><select class="filter" data-filter="subject"><option value="">Todas as disciplinas</option>${subjects().map(x=>`<option value="${esc(x)}" ${state.subject===x?'selected':''}>${esc(x)}</option>`).join('')}</select><select class="filter" data-filter="topic"><option value="">Todos os assuntos</option>${topics.map(x=>`<option value="${esc(x)}" ${state.topic===x?'selected':''}>${esc(x)}</option>`).join('')}</select><select class="filter" data-filter="difficulty"><option value="">Todas as dificuldades</option>${['fácil','médio','difícil','muito difícil'].map(x=>`<option value="${x}" ${state.difficulty===x?'selected':''}>${x}</option>`).join('')}</select></div>`}
-function questionCard(q,a){const fav=!!state.favorites[q.id];return `<article class="question"><div class="meta"><span class="chip">${esc(q.subject)}</span><span class="chip">${esc(q.topic)}</span><span class="chip">${esc(q.difficulty)}</span><span class="chip">AUTORAL • AOCP-STYLE</span></div><div class="qtext">${esc(q.question)}</div><div class="options">${q.options.map((o,i)=>{const l='ABCDE'[i],cl=a?(l===q.answer?' correct':l===a.selected?' wrong':''):'';return `<button class="opt${cl}" data-answer="${q.id}|${l}" ${a?'disabled':''}><b>${l})</b> ${esc(o)}</button>`}).join('')}</div>${a?`<div class="explain"><b>${a.correct?'✓ Acertou':'✗ Errou'}</b><br>${esc(q.explanation)}${q.legal_basis?`<br><br><b>Fundamento:</b> ${esc(q.legal_basis)}`:''}</div>`:''}<div class="actions"><button class="ghost" data-action="fav" data-id="${q.id}">${fav?'★ Favorita':'☆ Favoritar'}</button></div></article>`}
-function sim(){if(!state.sim)return `<section class="hero"><p class="eyebrow">Modo prova</p><h1>Simulado PMPE</h1><p>60 questões, cinco alternativas e resultado ao final. As questões são selecionadas do banco existente.</p><div class="notice">Banco atual: <b>${QUESTIONS.length}</b> questões. Não serão exibidas questões “fantasmas” para completar uma quantidade que não existe.</div><div class="actions"><button class="primary" data-action="startsim">Iniciar simulado</button></div></section>`;const s=state.sim,i=s.i,q=s.list[i],sel=s.answers[q.id];return `<section class="section"><div class="bar"><span>Questão ${i+1}/60</span><span class="timer" id="timer">${formatTime(s.endsAt-Date.now())}</span></div><div class="progress"><i style="width:${(i/60)*100}%"></i></div><article class="question" style="margin-top:12px">${questionCardSim(q,sel)}</article><div class="actions"><button class="ghost" data-action="simprev" ${i===0?'disabled':''}>Anterior</button><button class="primary" data-action="${i===59?'finishsim':'simnext'}">${i===59?'Finalizar':'Próxima'}</button></div></section>`}
-function questionCardSim(q,sel){return `<div class="meta"><span class="chip">${esc(q.subject)}</span><span class="chip">Questão ${state.sim.i+1}/60</span></div><div class="qtext">${esc(q.question)}</div><div class="options">${q.options.map((o,i)=>`<button class="opt ${sel==='ABCDE'[i]?'correct':''}" data-sim="${q.id}|${'ABCDE'[i]}"><b>${'ABCDE'[i]})</b> ${esc(o)}</button>`).join('')}</div>`}
-function review(){const ids=Object.keys(state.errors);return `<section class="hero"><p class="eyebrow">Revisão</p><h1>Caderno de erros</h1><p>Questões erradas: <b>${ids.length}</b>. Treine novamente e acompanhe sua evolução.</p></section><section class="section"><div class="list">${ids.map(id=>{const q=QUESTIONS.find(x=>x.id===id);return q?`<div class="row"><span><b>${esc(q.topic)}</b><br><span class="muted">${esc(q.subject)} • ${state.errors[id]} erro(s)</span></span><button class="ghost" data-review="${id}">Treinar</button></div>`:''}).join('')||'<div class="empty">Seu caderno ainda está vazio.</div>'}</div></section>`}
-function syllabus(){return `<section class="hero"><p class="eyebrow">Planejamento</p><h1>Edital verticalizado</h1><p>Estrutura de estudo organizada por disciplina e tópico. O conteúdo oficial deve ser conferido no edital vigente.</p></section>${Object.entries(EDITAL.syllabus||{}).map(([s,items])=>`<section class="section"><h2>${esc(s)}</h2>${items.map(x=>`<div class="row"><span>□ ${esc(x)}</span><span class="muted">${QUESTIONS.filter(q=>q.subject===s&&q.topic===x).length} Q</span></div>`).join('')}</section>`).join('')}`}
-function laws(){return `<section class="hero"><p class="eyebrow">Legislação</p><h1>Lei Seca</h1><p>Área de consulta e revisão. Nesta versão, a lista identifica os diplomas que deverão receber texto oficial versionado antes da publicação definitiva.</p></section><section class="section">${['Constituição Federal','Declaração Universal dos Direitos Humanos','ECA — Lei 8.069/1990','Abuso de Autoridade — Lei 13.869/2019','Tortura — Lei 9.455/1997','Maria da Penha — Lei 11.340/2006','Lei 7.716/1989','Crimes Ambientais — Lei 9.605/1998','Crimes Hediondos — Lei 8.072/1990','Lei de Drogas — Lei 11.343/2006','Estatuto dos Policiais Militares de PE — Lei Estadual 6.783/1974'].map(x=>`<div class="row"><span>${esc(x)}</span><span class="chip">PREPARAR</span></div>`).join('')}</section>`}
-function render(){document.body.innerHTML=shell(state.view==='home'?home():state.view==='questions'?questions():state.view==='sim'?sim():state.view==='review'?review():state.view==='syllabus'?syllabus():laws());bind();if(state.sim)tick()}
-function bind(){document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>{state.view=b.dataset.nav;state.index=0;save();render()});document.querySelectorAll('[data-filter]').forEach(s=>s.onchange=()=>{state[s.dataset.filter]=s.value;state.index=0;save();render()});document.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>answer(...b.dataset.answer.split('|')));document.querySelectorAll('[data-sim]').forEach(b=>b.onclick=()=>{state.sim.answers[b.dataset.sim.split('|')[0]]=b.dataset.sim.split('|')[1];save();render()});document.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>{state.view='questions';const list=filtered(),i=list.findIndex(q=>q.id===b.dataset.review);state.index=Math.max(0,i);save();render()});document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>action(b.dataset.action,b.dataset.id))}
-function answer(id,letter){const q=QUESTIONS.find(x=>x.id===id),correct=letter===q.answer;state.answers[id]={selected:letter,correct,at:Date.now()};if(!correct)state.errors[id]=(state.errors[id]||0)+1;save();render()}
-function action(a,id){if(a==='mission'){state.view='questions';state.subject='';state.topic='';state.difficulty='';state.index=Math.floor(Math.random()*QUESTIONS.length);save();render()}else if(a==='nextq'){state.index++;save();render()}else if(a==='prevq'){state.index=Math.max(0,state.index-1);save();render()}else if(a==='fav'){state.favorites[id]=!state.favorites[id];save();render()}else if(a==='startsim'){startSim()}else if(a==='simnext'){state.sim.i++;save();render()}else if(a==='simprev'){state.sim.i--;save();render()}else if(a==='finishsim'){finishSim()}else if(a==='about'){alert('SOU CAVEIRA é um projeto independente. Não possui afiliação oficial com PMPE ou Instituto AOCP. Questões autorais são identificadas como AOCP-style.')}}
-function startSim(){const pool=[...QUESTIONS].sort(()=>Math.random()-.5);let list=[];for(let i=0;i<60;i++)list.push(pool[i%pool.length]);state.sim={i:0,list,answers:{},endsAt:Date.now()+60*60*1000};save();render()}
-function finishSim(){const s=state.sim;let correct=0,answered=0;for(const q of s.list){const l=s.answers[q.id];if(l){answered++;if(l===q.answer)correct++;if(l!==q.answer)state.errors[q.id]=(state.errors[q.id]||0)+1}}const pct=Math.round(correct/60*100);state.history.unshift({date:new Date().toISOString(),correct,answered,total:60,pct});state.history=state.history.slice(0,20);state.sim=null;save();state.view='home';render();setTimeout(()=>alert(`Simulado finalizado\n${correct}/60 acertos\n${pct}% de aproveitamento\nRespondidas: ${answered}/60`),50)}
-function formatTime(ms){return Math.max(0,Math.floor(ms/1000)).toString().padStart(2,'0')==='00'?'00:00':`${String(Math.floor(ms/60000)).padStart(2,'0')}:${String(Math.floor(ms/1000)%60).padStart(2,'0')}`}
-function tick(){if(!state.sim)return;const el=$('#timer');if(!el)return;if(Date.now()>=state.sim.endsAt){finishSim();return}el.textContent=formatTime(state.sim.endsAt-Date.now());setTimeout(tick,1000)}
-render();
-</script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#07090c" />
+  <title>SOU CAVEIRA</title>
+  <style>
+    :root{
+      --bg:#07090c;--panel:#11151b;--panel2:#171c24;--text:#f4f6f8;--muted:#9da7b4;--gold:#e5b83f;--ok:#42d17a;--bad:#ef6461;--line:#29323e;--shadow:0 18px 45px rgba(0,0,0,.28);
+      --blue:#5ea3ff;--warning:#f7c96b;--danger:#ff7b7b;--soft:#1c2330;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at top,#111a25 0,#080b10 42%,#060709 100%);color:var(--text);font:15px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+    .app{max-width:980px;margin:0 auto;padding:16px 14px 40px}
+    header{position:sticky;top:0;z-index:5;background:rgba(8,11,16,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:10px;max-width:980px;margin:0 auto}
+    .brand{font-weight:900;letter-spacing:.08em;font-size:18px;color:var(--gold)}
+    .brand small{display:block;letter-spacing:.12em;font-size:10px;color:var(--muted);margin-top:2px}
+    .nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;-ms-overflow-style:none;scrollbar-width:none}
+    .nav::-webkit-scrollbar{display:none}
+    .nav-btn{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:8px 12px;font-weight:700;font-size:12px;white-space:nowrap;cursor:pointer}
+    .nav-btn.active{background:linear-gradient(135deg,#d9ad42,#f8d56f);color:#111;border-color:transparent}
+    .section{background:rgba(17,21,27,.9);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow);margin-top:16px}
+    .hero{padding:18px 0 6px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--gold);margin:0 0 8px}
+    h1,h2,h3,p{margin:0 0 10px}
+    h1{font-size:28px;line-height:1.1}
+    h2{font-size:22px}
+    .muted{color:var(--muted)}
+    .stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0 18px}
+    .stat-card{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:12px}
+    .stat-card .label{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .stat-card .value{font-size:24px;font-weight:800}
+    .chip{display:inline-flex;align-items:center;background:#1d2732;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:var(--text);font-size:11px;font-weight:700;margin:0 6px 6px 0}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    select,button,input{font:inherit}
+    select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:10px 12px;flex:1 1 120px}
+    .btn,.primary-btn,.secondary-btn,.ghost-btn{border:none;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer;transition:.2s ease}
+    .primary-btn{background:linear-gradient(135deg,#d9ad42,#f8d56f);color:#111}
+    .secondary-btn{background:var(--blue);color:#091827}
+    .ghost-btn{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+    .btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .question-list{display:flex;flex-direction:column;gap:12px}
+    .question-item{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:14px}
+    .meta{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+    .meta .chip{margin:0 8px 8px 0}
+    .q-text{font-size:17px;line-height:1.5;margin:12px 0}
+    .option-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .option{width:100%;text-align:left;background:#101821;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);cursor:pointer}
+    .option.correct{background:rgba(66,209,122,.14);border-color:rgba(66,209,122,.7);color:var(--text)}
+    .option.wrong{background:rgba(239,100,97,.12);border-color:rgba(239,100,97,.7);color:var(--text)}
+    .option.selected{outline:2px solid var(--gold)}
+    .data-panel{background:#101821;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}
+    .result-badge{display:inline-block;border-radius:999px;padding:6px 12px;font-weight:800;margin-bottom:10px}
+    .result-badge.good{background:rgba(66,209,122,.14);color:var(--ok);border:1px solid rgba(66,209,122,.35)}
+    .result-badge.bad{background:rgba(239,100,97,.12);color:var(--bad);border:1px solid rgba(239,100,97,.35)}
+    .list-card{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:12px}
+    .row-between{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--line);font-size:11px;background:#111c28;color:var(--text);font-weight:700}
+    .danger{color:var(--bad)}
+    .success{color:var(--ok)}
+    .warning{color:var(--warning)}
+    .empty{background:var(--panel2);border:1px dashed var(--line);color:var(--muted);padding:18px;border-radius:14px;text-align:center}
+    .summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .table{display:flex;flex-direction:column;gap:10px}
+    .row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .row:last-child{border-bottom:none}
+    .small{font-size:12px;color:var(--muted)}
+    .right{text-align:right}
+    @media (max-width: 640px){
+      .stats-grid,.summary-grid{grid-template-columns:1fr}
+      .brand{font-size:16px}
+      .app{padding:10px 10px 40px}
+      .section{padding:14px}
+      h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">Carregando…</div>
+  <script>
+    const QUESTIONS = window.__QUESTIONS__ || [];
+    const EDITAL = window.__EDITAL__ || {};
+    const KEY = 'sou-caveira-v2';
+    const LEGACY_KEY = 'sou-caveira-v1';
+
+    function normalizeQuestion(q) {
+      return {
+        id: q.id || 'SEM-ID',
+        subject: q.subject || 'Geral',
+        topic: q.topic || q.assunto || 'Geral',
+        subtopic: q.subtopic || q.subassunto || q.topic || 'Geral',
+        difficulty: q.difficulty || 'média',
+        question: q.question || q.text || 'Questão sem enunciado.',
+        answer: q.answer || q.resposta || '',
+        explanation: q.explanation || q.explicacao || q.justificativa || 'Sem explicação didática cadastrada para esta questão.',
+        options: Array.isArray(q.options) ? q.options : (Array.isArray(q.alternatives) ? q.alternatives : (q.alternatives && typeof q.alternatives === 'object' ? Object.entries(q.alternatives).map(([k, v]) => `${k}: ${v}`) : [])),
+        alternatives: q.alternatives && typeof q.alternatives === 'object' && !Array.isArray(q.alternatives) ? q.alternatives : null
+      };
+    }
+
+    const QUESTION_POOL = QUESTIONS.map(normalizeQuestion);
+
+    function defaultState() {
+      return {
+        view: 'home',
+        subject: '',
+        difficulty: '',
+        topic: '',
+        index: 0,
+        answers: {},
+        history: [],
+        questionStats: {},
+        errors: {},
+        favorites: {},
+        sim: null,
+        reviewSession: null,
+        focusQuestion: null,
+        learned: {}
+      };
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(KEY);
+        const legacy = localStorage.getItem(LEGACY_KEY);
+        let parsed = raw ? JSON.parse(raw) : null;
+
+        if (!parsed && legacy) {
+          parsed = JSON.parse(legacy);
+        }
+
+        const base = defaultState();
+        const merged = { ...base, ...(parsed || {}) };
+        merged.answers = parsed && parsed.answers ? parsed.answers : {};
+        merged.history = parsed && parsed.history ? parsed.history : [];
+        merged.questionStats = parsed && parsed.questionStats ? parsed.questionStats : {};
+        merged.errors = parsed && parsed.errors ? parsed.errors : {};
+        merged.learned = parsed && parsed.learned ? parsed.learned : {};
+
+        if ((!parsed || !merged.history.length) && legacy && legacy.answers) {
+          Object.entries(legacy.answers).forEach(([id, item]) => {
+            const q = getQuestion(id);
+            if (!q) return;
+            const wrong = item.correct === false ? 1 : 0;
+            const correct = item.correct === true ? 1 : 0;
+            const total = Math.max(1, wrong + correct);
+            merged.questionStats[id] = {
+              total,
+              correct,
+              wrong,
+              lastResult: item.correct ? 'acertou' : 'errou',
+              lastAnswerAt: item.at || new Date().toISOString(),
+              selected: item.selected || '',
+              correctAnswer: q.answer
+            };
+            if (wrong) {
+              merged.errors[id] = {
+                total,
+                correct,
+                wrong,
+                learned: false,
+                lastWrongAt: item.at || new Date().toISOString(),
+                reviewed: false
+              };
+            }
+          });
+        }
+
+        return merged;
+      } catch (e) {
+        return defaultState();
+      }
+    }
+
+    let state = loadState();
+
+    function save() {
+      localStorage.setItem(KEY, JSON.stringify(state));
+    }
+
+    function esc(value) {
+      return String(value ?? '').replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+    }
+
+    function getQuestion(id) {
+      return QUESTION_POOL.find((q) => q.id === id) || null;
+    }
+
+    function subjects() {
+      return [...new Set(QUESTION_POOL.map((q) => q.subject))];
+    }
+
+    function filteredQuestions() {
+      return QUESTION_POOL.filter((q) => {
+        const subjectOK = !state.subject || q.subject === state.subject;
+        const difficultyOK = !state.difficulty || q.difficulty === state.difficulty;
+        const topicOK = !state.topic || q.topic === state.topic;
+        return subjectOK && difficultyOK && topicOK;
+      });
+    }
+
+    function getQuestionStat(id) {
+      return state.questionStats[id] || { total: 0, correct: 0, wrong: 0, lastResult: null, lastAnswerAt: null, selected: '', correctAnswer: '' };
+    }
+
+    function buildQuestionOptions(q) {
+      const raw = q.options && q.options.length ? q.options : [];
+      if (raw.length) {
+        return raw.map((text, index) => ({ label: String.fromCharCode(65 + index), text }));
+      }
+      if (q.alternatives && typeof q.alternatives === 'object') {
+        return Object.entries(q.alternatives).map(([key, value]) => ({ label: String(key).toUpperCase(), text: value }));
+      }
+      return [];
+    }
+
+    function getSummaryStats() {
+      const list = Object.values(state.questionStats);
+      const answered = list.reduce((sum, item) => sum + (item.total || 0), 0);
+      const correct = list.reduce((sum, item) => sum + (item.correct || 0), 0);
+      const wrong = list.reduce((sum, item) => sum + (item.wrong || 0), 0);
+      return { answered, correct, wrong, pct: answered ? Math.round((correct / answered) * 100) : 0 };
+    }
+
+    function getTopicMastery(subject) {
+      const pool = QUESTION_POOL.filter((q) => q.subject === subject);
+      const total = pool.reduce((sum, q) => sum + (getQuestionStat(q.id).total || 0), 0);
+      const wrong = pool.reduce((sum, q) => sum + (getQuestionStat(q.id).wrong || 0), 0);
+      if (!total) return { label: '—', color: 'muted', total, wrong, accuracy: 0 };
+      const accuracy = (total - wrong) / total;
+      if (accuracy >= 0.7) return { label: '🟢 bom domínio', color: 'success', total, wrong, accuracy };
+      if (accuracy >= 0.45) return { label: '🟡 atenção', color: 'warning', total, wrong, accuracy };
+      return { label: '🔴 baixo domínio', color: 'danger', total, wrong, accuracy };
+    }
+
+    function getSubjectBreakdown() {
+      return subjects().map((subject) => {
+        const pool = QUESTION_POOL.filter((q) => q.subject === subject);
+        const total = pool.reduce((sum, q) => sum + (getQuestionStat(q.id).total || 0), 0);
+        const wrong = pool.reduce((sum, q) => sum + (getQuestionStat(q.id).wrong || 0), 0);
+        return { subject, total, wrong, accuracy: total ? (total - wrong) / total : 0 };
+      });
+    }
+
+    function getErrorsForSubject(subject) {
+      return QUESTION_POOL.filter((q) => q.subject === subject && (getQuestionStat(q.id).wrong || 0) > 0)
+        .reduce((sum, q) => sum + (getQuestionStat(q.id).wrong || 0), 0);
+    }
+
+    function getTopicErrors() {
+      const map = {};
+      QUESTION_POOL.forEach((q) => {
+        const stat = getQuestionStat(q.id);
+        const wrong = stat.wrong || 0;
+        if (wrong > 0) {
+          const key = q.topic || q.subject;
+          map[key] = (map[key] || 0) + wrong;
+        }
+      });
+      return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 6);
+    }
+
+    function getMostMissedQuestions() {
+      return QUESTION_POOL
+        .filter((q) => (getQuestionStat(q.id).wrong || 0) > 0)
+        .sort((a, b) => (getQuestionStat(b.id).wrong || 0) - (getQuestionStat(a.id).wrong || 0))
+        .slice(0, 6)
+        .map((q) => ({ q, stat: getQuestionStat(q.id) }));
+    }
+
+    function getPendingReviewCount() {
+      return QUESTION_POOL.filter((q) => (getQuestionStat(q.id).wrong || 0) > 0 && !(state.learned[q.id] || state.errors[q.id]?.learned)).length;
+    }
+
+    function getReviewQueue() {
+      return QUESTION_POOL.filter((q) => (getQuestionStat(q.id).wrong || 0) > 0 && !(state.learned[q.id] || state.errors[q.id]?.learned))
+        .sort((a, b) => (getQuestionStat(b.id).wrong || 0) - (getQuestionStat(a.id).wrong || 0));
+    }
+
+    function openQuestion(id) {
+      state.focusQuestion = id;
+      state.view = 'questions';
+      save();
+      render();
+    }
+
+    function clearFocus() {
+      state.focusQuestion = null;
+      state.view = 'questions';
+      save();
+      render();
+    }
+
+    function recordAnswer(id, selectedLetter) {
+      const q = getQuestion(id);
+      if (!q) return;
+
+      const normalizedSelected = String(selectedLetter || '').trim().toUpperCase();
+      const normalizedCorrect = String(q.answer || '').trim().toUpperCase();
+      const correct = normalizedSelected === normalizedCorrect;
+      const now = new Date().toISOString();
+
+      const prev = getQuestionStat(id);
+      const next = {
+        total: (prev.total || 0) + 1,
+        correct: (prev.correct || 0) + (correct ? 1 : 0),
+        wrong: (prev.wrong || 0) + (correct ? 0 : 1),
+        lastResult: correct ? 'acertou' : 'errou',
+        lastAnswerAt: now,
+        selected: normalizedSelected,
+        correctAnswer: normalizedCorrect
+      };
+
+      state.questionStats[id] = next;
+      state.answers[id] = { selected: normalizedSelected, correct, at: now, ...next };
+
+      state.history.push({
+        id: q.id,
+        disciplina: q.subject,
+        assunto: q.topic,
+        subassunto: q.subtopic || q.topic,
+        dificuldade: q.difficulty,
+        respostaEscolhida: normalizedSelected,
+        respostaCorreta: normalizedCorrect,
+        acertou: correct,
+        dataHora: now,
+        quantidadeVezesRespondida: next.total,
+        quantidadeErros: next.wrong,
+        quantidadeAcertos: next.correct
+      });
+
+      const errorRecord = state.errors[id] || { total: 0, correct: 0, wrong: 0, learned: false, lastWrongAt: null, reviewed: false };
+      errorRecord.total = next.total;
+      errorRecord.correct = next.correct;
+      errorRecord.wrong = next.wrong;
+      if (!correct) {
+        errorRecord.lastWrongAt = now;
+        errorRecord.reviewed = false;
+      } else {
+        errorRecord.lastCorrectAt = now;
+      }
+      state.errors[id] = errorRecord;
+
+      if (correct && state.reviewSession && state.reviewSession.ids.includes(id)) {
+        const done = state.reviewSession.ids.filter((qid) => qid !== id);
+        state.reviewSession.ids = done;
+        state.reviewSession.current = state.reviewSession.ids[0] || null;
+      }
+
+      if (correct && state.errors[id] && state.errors[id].wrong === 0) {
+        state.errors[id].learned = true;
+      }
+
+      if (!correct) {
+        state.errors[id].reviewed = false;
+      }
+
+      save();
+      render();
+    }
+
+    function markQuestionLearned(id) {
+      const q = getQuestion(id);
+      if (!q) return;
+      const errorRecord = state.errors[id] || { total: 0, correct: 0, wrong: 0, learned: false, reviewed: false };
+      errorRecord.learned = true;
+      errorRecord.reviewed = true;
+      state.errors[id] = errorRecord;
+      state.learned[id] = true;
+      save();
+      render();
+    }
+
+    function startReviewSession() {
+      const queue = getReviewQueue();
+      if (!queue.length) {
+        alert('Nenhuma questão pendente de revisão no caderno de erros.');
+        return;
+      }
+      state.reviewSession = {
+        ids: queue.map((q) => q.id),
+        index: 0,
+        current: queue[0].id
+      };
+      state.view = 'questions';
+      state.focusQuestion = queue[0].id;
+      save();
+      render();
+    }
+
+    function getReviewProgress() {
+      if (!state.reviewSession || !state.reviewSession.ids.length) return { current: 0, total: 0 };
+      return { current: state.reviewSession.index + 1, total: state.reviewSession.ids.length };
+    }
+
+    function navButtons() {
+      const items = [
+        ['home', 'Painel'],
+        ['questions', 'Questões'],
+        ['sim', 'Simulado'],
+        ['review', 'Caderno de Erros'],
+        ['syllabus', 'Edital'],
+        ['laws', 'Lei Seca']
+      ];
+      return items.map(([key, label]) => `<button class="nav-btn ${state.view === key ? 'active' : ''}" data-nav="${key}">${label}</button>`).join('');
+    }
+
+    function shell(content) {
+      return `<div class="app"><header><div class="topbar"><div class="brand">☠ SOU CAVEIRA<small>PMPE • AOCP • INDEPENDENTE</small></div><div class="nav">${navButtons()}</div></div></header><main>${content}</main></div>`;
+    }
+
+    function home() {
+      const summary = getSummaryStats();
+      const bySubject = getSubjectBreakdown();
+      return `
+        <section class="hero">
+          <p class="eyebrow">Painel</p>
+          <h1>Resumo do desempenho</h1>
+          <p class="muted">Estatísticas calculadas a partir do histórico real das respostas registradas.</p>
+        </section>
+        <section class="stats-grid">
+          <div class="stat-card"><span class="label">Questões respondidas</span><span class="value">${summary.answered}</span></div>
+          <div class="stat-card"><span class="label">Acertos</span><span class="value">${summary.correct}</span></div>
+          <div class="stat-card"><span class="label">Erros</span><span class="value">${summary.wrong}</span></div>
+          <div class="stat-card"><span class="label">Aproveitamento</span><span class="value">${summary.pct}%</span></div>
+        </section>
+        <div class="section">
+          <h2>Domínio por disciplina</h2>
+          <div class="table">
+            ${bySubject.map((item) => {
+              const mastery = item.total ? (item.accuracy >= 0.7 ? '🟢 bom domínio' : item.accuracy >= 0.45 ? '🟡 atenção' : '🔴 baixo domínio') : '—';
+              return `<div class="row"><div><strong>${esc(item.subject)}</strong><div class="small">${item.total} respostas • ${item.wrong} erros</div></div><div class="right"><span class="pill">${mastery}</span></div></div>`;
+            }).join('') || '<div class="empty">Nenhuma resposta registrada ainda.</div>'}
+          </div>
+        </div>
+      `;
+    }
+
+    function filters() {
+      const topics = [...new Set(QUESTION_POOL.filter((q) => !state.subject || q.subject === state.subject).map((q) => q.topic))];
+      return `
+        <div class="filters">
+          <select data-filter="subject">
+            <option value="">Todas as disciplinas</option>
+            ${subjects().map((subject) => `<option value="${esc(subject)}" ${state.subject === subject ? 'selected' : ''}>${esc(subject)}</option>`).join('')}
+          </select>
+          <select data-filter="difficulty">
+            <option value="">Todas as dificuldades</option>
+            ${['fácil','média','difícil'].map((level) => `<option value="${level}" ${state.difficulty === level ? 'selected' : ''}>${level}</option>`).join('')}
+          </select>
+          <select data-filter="topic">
+            <option value="">Todos os assuntos</option>
+            ${topics.map((topic) => `<option value="${esc(topic)}" ${state.topic === topic ? 'selected' : ''}>${esc(topic)}</option>`).join('')}
+          </select>
+        </div>
+      `;
+    }
+
+    function questionCard(q) {
+      const stat = getQuestionStat(q.id);
+      const lastResult = state.answers[q.id];
+      const options = buildQuestionOptions(q);
+      const status = lastResult ? (lastResult.correct ? 'Acertou' : 'Errou') : 'Ainda não respondida';
+      return `
+        <article class="question-item">
+          <div class="meta">
+            <span class="chip">${esc(q.subject)}</span>
+            <span class="chip">${esc(q.topic)}</span>
+            <span class="chip">${esc(q.difficulty)}</span>
+            ${stat.total ? `<span class="chip">${stat.total} tentativas</span>` : ''}
+          </div>
+          <div class="q-text">${esc(q.question)}</div>
+          <div class="option-list">
+            ${options.map(({ label, text }) => {
+              const chosen = String(state.answers[q.id]?.selected || '').toUpperCase() === label.toUpperCase();
+              const correct = String(q.answer || '').toUpperCase() === label.toUpperCase();
+              const classes = ['option'];
+              if (state.answers[q.id]) {
+                if (correct) classes.push('correct');
+                if (chosen && !correct) classes.push('wrong');
+                if (chosen && correct) classes.push('selected');
+              } else if (chosen) {
+                classes.push('selected');
+              }
+              return `<button type="button" class="${classes.join(' ')}" data-answer-id="${q.id}" data-answer-key="${label}">${label}) ${esc(text)}</button>`;
+            }).join('')}
+          </div>
+          ${lastResult ? `
+            <div class="data-panel">
+              <div class="result-badge ${lastResult.correct ? 'good' : 'bad'}">${status}</div>
+              <p><strong>Resposta escolhida:</strong> ${esc(lastResult.selected || '-')}</p>
+              <p><strong>Resposta correta:</strong> ${esc(q.answer || '-')}</p>
+              ${q.explanation ? `<p><strong>Explicação:</strong> ${esc(q.explanation)}</p>` : ''}
+              <p class="small">Tentativas: ${stat.total} • Acertos: ${stat.correct} • Erros: ${stat.wrong}</p>
+            </div>
+          ` : ''}
+          <div class="btn-row">
+            <button class="ghost-btn" data-open="${q.id}">Abrir questão</button>
+            <button class="ghost-btn" data-toggle-learned="${q.id}">${state.learned[q.id] || state.errors[q.id]?.learned ? 'Aprendido' : 'Marcar como aprendido'}</button>
+          </div>
+        </article>
+      `;
+    }
+
+    function questions() {
+      if (state.focusQuestion) {
+        const q = getQuestion(state.focusQuestion);
+        if (!q) return `<section class="section"><h2>Questão não encontrada</h2><button class="primary-btn" data-action="clear-focus">Voltar</button></section>`;
+        const progress = getReviewProgress();
+        return `
+          <section class="hero">
+            <p class="eyebrow">Questão</p>
+            <h1>${esc(q.subject)}</h1>
+            ${state.reviewSession ? `<p class="muted">Revisão: ${progress.current}/${progress.total}</p>` : ''}
+          </section>
+          <section class="section">
+            ${questionCard(q)}
+            <div class="btn-row">
+              <button class="primary-btn" data-action="clear-focus">Voltar ao banco</button>
+              ${state.reviewSession ? `<button class="secondary-btn" data-action="next-review">Próxima questão</button>` : ''}
+            </div>
+          </section>
+        `;
+      }
+
+      const list = filteredQuestions();
+      return `
+        <section class="hero">
+          <p class="eyebrow">Banco de questões</p>
+          <h1>Questões do SOU CAVEIRA</h1>
+        </section>
+        <section class="section">
+          ${filters()}
+          <div class="question-list">
+            ${list.length ? list.map((q) => questionCard(q)).join('') : '<div class="empty">Nenhuma questão encontrada com esses filtros.</div>'}
+          </div>
+        </section>
+      `;
+    }
+
+    function review() {
+      const ids = QUESTION_POOL.filter((q) => (getQuestionStat(q.id).wrong || 0) > 0);
+      const totalErrors = ids.length;
+      const bySubject = subjects().map((subject) => ({ subject, total: getErrorsForSubject(subject) }));
+      const byTopic = getTopicErrors();
+      const missed = getMostMissedQuestions();
+      const pending = getPendingReviewCount();
+
+      return `
+        <section class="hero">
+          <p class="eyebrow">CADERNO DE ERROS</p>
+          <h1>Resumo inteligente do aluno</h1>
+          <p class="muted">Os indicadores abaixo são calculados com base no histórico real de respostas.</p>
+        </section>
+        <section class="stats-grid">
+          <div class="stat-card"><span class="label">Total de questões erradas</span><span class="value">${totalErrors}</span></div>
+          <div class="stat-card"><span class="label">Ainda não revisadas</span><span class="value">${pending}</span></div>
+          <div class="stat-card"><span class="label">Erros por disciplina</span><span class="value">${bySubject.reduce((sum, item) => sum + item.total, 0)}</span></div>
+          <div class="stat-card"><span class="label">Questões mais erradas</span><span class="value">${missed.length ? missed[0].q.id : '—'}</span></div>
+        </section>
+        <section class="section">
+          <div class="btn-row">
+            <button class="primary-btn" data-action="start-review">Revisar erros</button>
+          </div>
+          <div class="summary-grid">
+            <div class="list-card">
+              <h3>Erros por disciplina</h3>
+              ${subjects().map((subject) => {
+                const total = getErrorsForSubject(subject);
+                return total ? `<div class="row"><span>${esc(subject)}</span><strong>${total}</strong></div>` : '';
+              }).filter(Boolean).join('') || '<div class="empty">Sem erros por disciplina.</div>'}
+            </div>
+            <div class="list-card">
+              <h3>Erros por assunto</h3>
+              ${byTopic.length ? byTopic.map(([topic, total]) => `<div class="row"><span>${esc(topic)}</span><strong>${total}</strong></div>`).join('') : '<div class="empty">Sem erros por assunto.</div>'}
+            </div>
+          </div>
+          <div class="list-card" style="margin-top:12px;">
+            <h3>Questões que o aluno mais erra</h3>
+            ${missed.length ? missed.map(({ q, stat }) => `<div class="row"><span>${esc(q.id)} • ${esc(q.subject)}</span><strong>${stat.wrong} erros</strong></div>`).join('') : '<div class="empty">Ainda não há dados suficientes.</div>'}
+          </div>
+          <div class="list-card" style="margin-top:12px;">
+            <h3>Questões ainda não revisadas</h3>
+            ${getReviewQueue().length ? getReviewQueue().slice(0, 8).map((q) => `<div class="row"><span>${esc(q.id)} • ${esc(q.subject)}</span><button class="ghost-btn" data-open="${q.id}">Abrir</button></div>`).join('') : '<div class="empty">Tudo revisado por enquanto.</div>'}
+          </div>
+        </section>
+      `;
+    }
+
+    function syllabus() {
+      return `
+        <section class="hero">
+          <p class="eyebrow">Planejamento</p>
+          <h1>Edital verticalizado</h1>
+          <p class="muted">Estrutura de estudo organizada por disciplina e tópico.</p>
+        </section>
+        <section class="section">
+          ${subjects().map((subject) => `<div class="list-card"><h3>${esc(subject)}</h3>${[...new Set(QUESTION_POOL.filter((q) => q.subject === subject).map((q) => q.topic))].map((topic) => `<div class="row"><span>${esc(topic)}</span><span class="pill">${getTopicMastery(subject).label}</span></div>`).join('')}</div>`).join('')}
+        </section>
+      `;
+    }
+
+    function laws() {
+      return `
+        <section class="hero">
+          <p class="eyebrow">Legislação</p>
+          <h1>Lei Seca</h1>
+          <p class="muted">Área de consulta e revisão institucional.</p>
+        </section>
+        <section class="section">
+          ${(EDITAL && Array.isArray(EDITAL.leiSeca)) ? EDITAL.leiSeca.map((item) => `<div class="list-card"><h3>${esc(item.titulo || 'Item')}</h3><p>${esc(item.descricao || '')}</p></div>`).join('') : '<div class="empty">Nenhuma referência de lei seca cadastrada.</div>'}
+        </section>
+      `;
+    }
+
+    function sim() {
+      if (!state.sim) {
+        return `
+          <section class="hero">
+            <p class="eyebrow">Modo prova</p>
+            <h1>Simulado PMPE</h1>
+            <p class="muted">60 questões, cinco alternativas e resultado ao final.</p>
+          </section>
+          <section class="section">
+            <button class="primary-btn" data-action="start-sim">Iniciar simulado</button>
+          </section>
+        `;
+      }
+
+      const current = state.sim.list[state.sim.i];
+      if (!current) return `<section class="section"><h2>Simulado finalizado</h2><button class="primary-btn" data-action="finish-sim">Ver resultado</button></section>`;
+      const options = buildQuestionOptions(current);
+      const answered = state.sim.answers[current.id];
+      return `
+        <section class="hero">
+          <p class="eyebrow">Simulado</p>
+          <h1>Questão ${state.sim.i + 1}/${state.sim.list.length}</h1>
+        </section>
+        <section class="section">
+          <div class="question-item">
+            <div class="meta"><span class="chip">${esc(current.subject)}</span><span class="chip">${esc(current.topic)}</span><span class="chip">${esc(current.difficulty)}</span></div>
+            <div class="q-text">${esc(current.question)}</div>
+            <div class="option-list">
+              ${options.map(({ label, text }) => {
+                const selected = answered && answered.selected === label;
+                return `<button class="option ${selected ? 'selected' : ''}" data-sim-answer="${label}" data-sim-id="${current.id}">${label}) ${esc(text)}</button>`;
+              }).join('')}
+            </div>
+            <div class="btn-row">
+              <button class="primary-btn" data-action="next-sim">Próxima</button>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function render() {
+      const viewMap = {
+        home: home(),
+        questions: questions(),
+        sim: sim(),
+        review: review(),
+        syllabus: syllabus(),
+        laws: laws()
+      };
+      document.body.innerHTML = shell(viewMap[state.view] || home());
+    }
+
+    document.addEventListener('click', (event) => {
+      const nav = event.target.closest('[data-nav]');
+      if (nav) {
+        state.view = nav.dataset.nav;
+        state.focusQuestion = null;
+        if (state.view !== 'questions') state.subject = '';
+        save();
+        render();
+        return;
+      }
+
+      const action = event.target.closest('[data-action]');
+      if (action) {
+        const { action: name } = action.dataset;
+        if (name === 'clear-focus') {
+          clearFocus();
+        }
+        if (name === 'start-review') {
+          startReviewSession();
+        }
+        if (name === 'next-review') {
+          const queue = getReviewQueue();
+          const currentIndex = queue.findIndex((q) => q.id === state.focusQuestion);
+          const next = queue[currentIndex + 1] || queue[0];
+          if (next) {
+            state.focusQuestion = next.id;
+            state.reviewSession = { ids: queue.map((q) => q.id), index: queue.findIndex((q) => q.id === next.id), current: next.id };
+            save();
+            render();
+          }
+        }
+        if (name === 'start-sim') {
+          const pool = [...QUESTION_POOL].sort(() => Math.random() - 0.5);
+          state.sim = { i: 0, list: pool.slice(0, 60), answers: {} };
+          save();
+          render();
+        }
+        if (name === 'next-sim') {
+          const currentId = state.sim?.list[state.sim.i]?.id;
+          if (currentId && state.sim.answers[currentId] === undefined) {
+            alert('Responda a questão atual antes de avançar.');
+            return;
+          }
+          if (state.sim && state.sim.i < state.sim.list.length - 1) {
+            state.sim.i += 1;
+            save();
+            render();
+          } else {
+            state.sim = null;
+            save();
+            render();
+          }
+        }
+        if (name === 'finish-sim') {
+          state.sim = null;
+          save();
+          render();
+        }
+        return;
+      }
+
+      const openBtn = event.target.closest('[data-open]');
+      if (openBtn) {
+        openQuestion(openBtn.dataset.open);
+        return;
+      }
+
+      const learned = event.target.closest('[data-toggle-learned]');
+      if (learned) {
+        markQuestionLearned(learned.dataset.toggleLearned);
+        return;
+      }
+
+      const answerBtn = event.target.closest('[data-answer-id]');
+      if (answerBtn) {
+        const id = answerBtn.dataset.answerId;
+        const key = answerBtn.dataset.answerKey;
+        recordAnswer(id, key);
+        return;
+      }
+
+      const simAnswer = event.target.closest('[data-sim-answer]');
+      if (simAnswer) {
+        const id = simAnswer.dataset.simId;
+        const letter = simAnswer.dataset.simAnswer;
+        if (!state.sim) return;
+        state.sim.answers[id] = { selected: letter, at: Date.now() };
+        state.answers[id] = { ...state.answers[id], selected: letter };
+        save();
+        render();
+      }
+    });
+
+    document.addEventListener('change', (event) => {
+      const filter = event.target.closest('[data-filter]');
+      if (!filter) return;
+      const key = filter.dataset.filter;
+      if (key === 'subject') state.subject = filter.value;
+      if (key === 'difficulty') state.difficulty = filter.value;
+      if (key === 'topic') state.topic = filter.value;
+      save();
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
